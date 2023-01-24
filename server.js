@@ -1,6 +1,10 @@
 var express = require("express");
 var app = express();
 
+// Cross-Origin Resource Sharing
+const cors = require("cors");
+app.use(cors());
+
 // Routes GET requests to /lessons to the request handler
 app.get("/lessons", function(request, response) {
     response.json( [{topic: 'Math',location:'Hendon',price:100},
